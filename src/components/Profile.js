@@ -6,6 +6,8 @@ function Profile({ user, theme }) {
   return (
     <div>
       <h2>{user.name}'s Profile</h2>
+      {/* passes theme down to Interest
+          this is know as prop-drilling */}
       <Interests interests={user.interests} theme={theme} />
     </div>
   );
