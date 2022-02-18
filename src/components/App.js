@@ -4,14 +4,13 @@ import Profile from "./Profile";
 // import the provider
 import { UserProvider } from '../context/user'
 // import the ThemeContext
-import { ThemeContext, ThemeProvider } from '../context/theme'
+import { ThemeContext } from '../context/theme'
 
 function App() {
 
   const { theme } = useContext(ThemeContext);
 
   return (
-    <ThemeProvider>
       <main className={theme}>
         {/* wrap components that need access to context data in the provider */}
         <UserProvider>
@@ -19,7 +18,6 @@ function App() {
           <Profile />
         </UserProvider>
       </main>
-    </ThemeProvider>
   );
 }
 
